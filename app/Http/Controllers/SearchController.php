@@ -20,11 +20,11 @@ class SearchController extends Controller
     public function index()
     {
         echo 'hai bro';
-        echo '<br/>';
-        var_dump(ekstrak_trigram('subhanallah'));
-        $file = Storage::disk('local')->get('fonetik_vokal.txt');
-        var_dump($file);
-        var_dump(file('../storage/app/quran_teks.txt', FILE_IGNORE_NEW_LINES));
+        // echo '<br/>';
+        // var_dump(ekstrak_trigram('subhanallah'));
+        // $file = Storage::disk('local')->get('fonetik_vokal.txt');
+        // var_dump($file);
+        // var_dump(file('../storage/app/quran_teks.txt', FILE_IGNORE_NEW_LINES));
     }
 
     public function search(Request $request)
