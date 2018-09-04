@@ -1,11 +1,4 @@
 <?php
-
-// pencari, flat file version
-
-include_once 'app/function/lib/trigram.php';
-include_once 'app/function/lib/array_utility.php';
-include_once 'app/function/lib/doc_class.php';
-
 // fungsi pencari
 // param  : $query_final yang siap cari (sudah melalui pengodean fonetik)
 //          $term_list_filename nama file term list

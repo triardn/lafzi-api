@@ -192,22 +192,22 @@ class SearchController extends Controller
                     array_push($result, $data);
                 }
 
-                // write to cache
-                $cf = fopen($cache_file, 'w');
-                fwrite($cf, serialize($result));
-                fclose($cf);
+                // // write to cache
+                // $cf = fopen($cache_file, 'w');
+                // fwrite($cf, serialize($result));
+                // fclose($cf);
 
-                $from_cache = false;
+                // $from_cache = false;
 
-                // clean cache except 50 newest; linux only
-                $old_caches = [];
-                exec("ls -t ../cache/ | sed -e '1,50d'", $old_caches);
+                // // clean cache except 50 newest; linux only
+                // $old_caches = [];
+                // exec("ls -t ../cache/ | sed -e '1,50d'", $old_caches);
 
-                if (count($old_caches) > 0) {
-                    foreach ($old_caches as $old_cache) {
-                        unlink('../cache/' . $old_cache);
-                    }
-                }
+                // if (count($old_caches) > 0) {
+                //     foreach ($old_caches as $old_cache) {
+                //         unlink('../cache/' . $old_cache);
+                //     }
+                // }
 
                 $status = 200;
                 $response['message'] = 'success';
