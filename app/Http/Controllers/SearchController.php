@@ -54,11 +54,11 @@ class SearchController extends Controller
         }
 
         // baca data teks quran untuk ditampilkan
-        $quran_text = file('../storage/app/quran_teks.txt', FILE_IGNORE_NEW_LINES);
-        $quran_trans = file('../storage/app/trans-indonesian.txt', FILE_IGNORE_NEW_LINES);
+        $quran_text = file(storage_path('app/quran_teks.txt'), FILE_IGNORE_NEW_LINES);
+        $quran_trans = file(storage_path('app/trans-indonesian.txt'), FILE_IGNORE_NEW_LINES);
 
         // khusus ayat dengan fawatihussuwar
-        $quran_text_muqathaat = file('../storage/app/quran_muqathaat.txt', FILE_IGNORE_NEW_LINES);
+        $quran_text_muqathaat = file(storage_path('app/quran_muqathaat.txt'), FILE_IGNORE_NEW_LINES);
         $quran_text_muqathaat_map = [];
 
         foreach ($quran_text_muqathaat as $line) {
